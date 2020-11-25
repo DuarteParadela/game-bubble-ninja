@@ -3,15 +3,7 @@
   padding: 0;
 }
 
-/* #game {
-  border: 1px solid black;
-  margin: auto;
-  width: 1000px;
-  height: 500px;
-  display: block;
-}
-
-#player {
+/* #player {
   border: 1px solid black;
   background-color: red;
   width: 50px;
@@ -26,16 +18,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 canvas {
   border: 1px solid;
 }
 
-#ground {
+/* #ground {
   background-image: url("../images/ground.png");
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
-}
+} */
+
+/* #score {
+  width: 1280px;
+  height: 50px;
+} */
+
+/* .fixed {
+  display: flex;
+  justify-content: center;
+} */
