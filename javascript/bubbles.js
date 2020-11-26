@@ -1,9 +1,9 @@
 import { WIDTH, HEIGHT, ctx } from "./world.js";
 
+// window.onload = function () {
 let bubble = new Image();
-window.onload = function () {
-  bubble.src = "../images/bubble.png";
-};
+bubble.src = "../images/bubble.png";
+// };
 
 export class Bubble {
   constructor(x, y, dx, dy, radius) {
