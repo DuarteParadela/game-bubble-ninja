@@ -18,7 +18,7 @@ export class Bubble {
       return;
     }
     ctx.drawImage(
-      bubble,
+      this.image,
       this.x - this.radius,
       this.y - this.radius,
       this.radius * 2,
