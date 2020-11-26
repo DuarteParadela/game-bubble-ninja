@@ -14,7 +14,7 @@ setInterval(function () {
 
 setInterval(function () {
   createNewBubble();
-}, 3500);
+}, 3700);
 
 setInterval(function () {
   removeBubble();
