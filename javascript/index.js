@@ -4,9 +4,6 @@ import { Bubble } from "./bubbles.js";
 
 // Variables dx et dy gèrent la vitesse de déplacement de l'élément dans le canvas
 
-// var img = new Image(); // Crée un nouvel élément Image
-// // img.src = "../images/IDLE-RIGHT.png";
-
 let bgImage = new Image();
 bgImage.src = "../images/bg2.gif";
 
@@ -73,16 +70,21 @@ function background() {
   ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT);
 }
 
+function drawScores(text, x, y) {
+  ctx.font = "30px Arial";
+  ctx.strokeStyle = "White";
+  ctx.lineWidth = 5;
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = "black";
+  ctx.fillText(text, x, y);
+}
+
 function animate() {
   request = requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   background();
-  ctx.strokeStyle = "white";
-  ctx.font = "30px PressStart";
-  ctx.fillText(`Score : ${counter}`, 30, 40);
-  ctx.strokeStyle;
-  ctx.font = "30px serif";
-  ctx.fillText(`Number of bubbles ${bubbleArray.length}`, 1000, 40);
+  drawScores(`Score: ${counter}`, 30, 50);
+  drawScores(`Number of bubbles: ${bubbleArray.length}`, 970, 50);
   bubbleArray.forEach((bubble) => {
     bubble.update();
     checkCollision(player, bubble);
