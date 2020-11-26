@@ -1,7 +1,9 @@
 import { WIDTH, HEIGHT, ctx } from "./world.js";
 
 let bubble = new Image();
-bubble.src = "../images/bubble.png";
+window.onload = function () {
+  bubble.src = "../images/bubble.png";
+};
 
 export class Bubble {
   constructor(x, y, dx, dy, radius) {
@@ -21,6 +23,7 @@ export class Bubble {
       this.radius * 2
     );
   }
+
   update() {
     if (this.x + this.radius > WIDTH || this.x - this.radius < 0) {
       this.dx = -this.dx;
