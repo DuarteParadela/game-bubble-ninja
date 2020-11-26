@@ -1,17 +1,10 @@
 import { WIDTH, ctx } from "./world.js";
 
-let playerRight;
+let playerRight = new Image();
+playerRight.src = "../images/kirby-right.png";
 
-document.onload = function () {
-  playerRight = new Image();
-  playerRight.src = "../images/kirby-right.png";
-};
-
-let playerLeft;
-document.onload = function () {
-  playerLeft = new Image();
-  playerLeft.src = "../images/kirby-left.png";
-};
+let playerLeft = new Image();
+playerLeft.src = "../images/kirby-left.png";
 
 export class Player {
   constructor(x, y) {
@@ -27,6 +20,9 @@ export class Player {
   }
 
   draw() {
+    if (!playerRight.complete || !playerLeft.complete) {
+      return;
+    }
     ctx.drawImage(
       this.image,
       this.x - this.radius,

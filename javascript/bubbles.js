@@ -1,11 +1,8 @@
 import { WIDTH, HEIGHT, ctx } from "./world.js";
 
-let bubble;
+let bubble = new Image();
 
-document.onload = function () {
-  bubble = new Image();
-  bubble.src = "../images/bubble.png";
-};
+bubble.src = "../images/bubble.png";
 
 export class Bubble {
   constructor(x, y, dx, dy, radius) {
@@ -17,6 +14,9 @@ export class Bubble {
   }
 
   draw() {
+    if (!bubble.complete) {
+      return;
+    }
     ctx.drawImage(
       bubble,
       this.x - this.radius,
