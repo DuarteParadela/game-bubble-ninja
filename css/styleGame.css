@@ -15,4 +15,6 @@
 canvas {
   margin-top: 20px;
   border: 1px solid;
+  background-image: url("../images/bg2.gif");
+  background-size: 1280px 800px;
 }

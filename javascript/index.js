@@ -4,10 +4,8 @@ import { Bubble } from "./bubbles.js";
 
 // Variables dx et dy gèrent la vitesse de déplacement de l'élément dans le canvas
 
-let bgImage = new Image();
-bgImage.onload = function () {
-  bgImage.src = "../images/bg2.gif";
-};
+// let bgImage = new Image();
+// bgImage.src = "../images/bg2.gif";
 
 let counter = 0;
 setInterval(function () {
@@ -39,12 +37,12 @@ function removeBubble() {
   }
 }
 
-function init() {
-  for (let i = 0; i < 1; i++) {
-    let radius = 50;
-    createNewBubble();
-  }
-}
+// function init() {
+//   for (let i = 0; i < 1; i++) {
+//     let radius = 50;
+//     createNewBubble();
+//   }
+// }
 
 let player = new Player(WIDTH / 2, HEIGHT - 40);
 
@@ -68,9 +66,9 @@ function checkCollision(player, bubble) {
 
 let request;
 
-function background() {
-  ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT);
-}
+// function background() {
+//   ctx.drawImage(bgImage, 0, 0, WIDTH, HEIGHT);
+// }
 
 function drawScores(text, x, y) {
   ctx.font = "30px Arial";
@@ -84,7 +82,7 @@ function drawScores(text, x, y) {
 function animate() {
   request = requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  background();
+  // background();
   drawScores(`Score: ${counter}`, 30, 50);
   drawScores(`Number of bubbles: ${bubbleArray.length}`, 970, 50);
   bubbleArray.forEach((bubble) => {
