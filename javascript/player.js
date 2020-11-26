@@ -1,13 +1,15 @@
 import { WIDTH, ctx } from "./world.js";
 
-let playerRight = new Image();
+let playerRight;
 
 document.onload = function () {
+  playerRight = new Image();
   playerRight.src = "../images/kirby-right.png";
 };
 
-let playerLeft = new Image();
+let playerLeft;
 document.onload = function () {
+  playerLeft = new Image();
   playerLeft.src = "../images/kirby-left.png";
 };
 

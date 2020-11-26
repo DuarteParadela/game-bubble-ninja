@@ -1,8 +1,9 @@
 import { WIDTH, HEIGHT, ctx } from "./world.js";
 
-let bubble = new Image();
+let bubble;
 
 document.onload = function () {
+  bubble = new Image();
   bubble.src = "../images/bubble.png";
 };
 
