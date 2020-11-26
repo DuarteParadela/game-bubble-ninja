@@ -1,7 +1,7 @@
 import { WIDTH, HEIGHT, ctx } from "./world.js";
 
 let bubble = new Image();
-bubble.src = "../images/bg2.gif";
+bubble.src = "./images/bubble.png";
 
 export class Bubble {
   constructor(x, y, dx, dy, radius) {
