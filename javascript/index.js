@@ -92,7 +92,9 @@ function animate() {
   player.update();
 }
 
-animate();
+window.onload = function () {
+  animate();
+};
 // init();
 
 function keyDown(event) {
