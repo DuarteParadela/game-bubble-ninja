@@ -26,39 +26,30 @@
 #title h1 {
   font-family: "Press Start 2P";
   font-size: 4em;
-  background: linear-gradient(to right, crimson, pink, springgreen);
-  background-size: 200% 200%;
-  animation: rainbow 2s ease-in-out infinite;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 1);
-  transition: color 0.2s ease-in-out;
   text-transform: uppercase;
   font-weight: 900;
+  text-shadow: 0 4px 0 #00ecff, 0 -4px 0 #ff4045;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
+
 #title h1:hover {
   color: rgba(0, 0, 0, 0);
 }
-@keyframes rainbow {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
+
+.kirby-div {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
 }
 
-.kirby {
+.kirby-img {
   width: 275px;
   height: 200px;
   position: absolute;
-  bottom: 95px;
+  left: calc(50% - 137.5px);
+  top: 650px;
 }

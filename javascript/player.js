@@ -19,6 +19,7 @@ export class Player {
     };
     this.image = playerRight;
   }
+
   draw() {
     ctx.drawImage(
       this.image,
