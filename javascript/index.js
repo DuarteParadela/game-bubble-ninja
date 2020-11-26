@@ -93,7 +93,7 @@ function animate() {
 }
 
 animate();
-init();
+// init();
 
 function keyDown(event) {
   switch (event.keyCode) {
