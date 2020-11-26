@@ -4,9 +4,6 @@ import { Bubble } from "./bubbles.js";
 
 // Variables dx et dy gèrent la vitesse de déplacement de l'élément dans le canvas
 
-// let bgImage = new Image();
-// bgImage.src = "../images/bg2.gif";
-
 let counter = 0;
 setInterval(function () {
   counter++;
