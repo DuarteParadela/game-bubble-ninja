@@ -11,6 +11,7 @@ export class Bubble {
     this.dx = dx;
     this.dy = dy;
     this.radius = radius;
+    this.image = bubble;
   }
 
   draw() {
